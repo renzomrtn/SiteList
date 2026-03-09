@@ -1,0 +1,74 @@
+/* ── CSS VARIABLES ── */
+:root {
+  --cream: #F5F0E8;
+  --warm-white: #FAF8F4;
+  --ink: #1A1714;
+  --ink-light: #4A4540;
+  --ink-muted: #8C867E;
+  --accent: #C84B2F;
+  --accent-soft: #E8A090;
+  --gold: #C9A84C;
+  --border: #DDD8CF;
+  --card-bg: #FFFFFF;
+  --tag-bg: #EDE9E0;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.4;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SHARED TAG COMPONENT ── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all 0.15s;
+  background: var(--tag-bg);
+  color: var(--ink-light);
+}
+.tag:hover  { border-color: var(--accent); color: var(--accent); }
+.tag.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .main { grid-template-columns: 1fr !important; }
+  aside { display: none !important; }
+}
