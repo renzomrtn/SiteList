@@ -31,21 +31,11 @@
         </div>
       </div>
     </div>
-
-    <!-- Collections -->
-    <div class="aside-section">
-      <div class="aside-title">Collections</div>
-      <ul class="category-list">
-        <li v-for="col in collections" :key="col.label">
-          <span>{{ col.icon }} {{ col.label }}</span>
-        </li>
-      </ul>
-    </div>
   </aside>
 </template>
 
 <script setup>
-import { categories, tags, collections } from '~/data/categories.js'
+import { categories, tags} from '~/data/categories.js'
 
 defineProps({
   activeCategory: { type: String, default: 'All Sites' },

@@ -2,11 +2,10 @@
   <div class="hero">
     <div class="hero-eyebrow">The Web, Catalogued</div>
 
-    <h1>A <em>living dictionary</em><br />of the internet</h1>
+    <h1>My list of <em>Awesome Websites</em><br />in the internet</h1>
 
     <p class="hero-sub">
-      Discover, organize, and share the best websites across every niche.
-      Curated by the community, for the curious.
+      Who needs a bookmark?
     </p>
 
     <div class="search-wrap">
@@ -24,8 +23,6 @@
       <div><strong>4,218</strong> websites</div>
       <div class="divider">|</div>
       <div><strong>139</strong> categories</div>
-      <div class="divider">|</div>
-      <div><strong>2,041</strong> curators</div>
     </div>
   </div>
 </template>

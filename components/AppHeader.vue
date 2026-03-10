@@ -1,39 +1,19 @@
 <template>
   <header>
     <div class="logo">
-      Web<span>Dict</span>
+      Web<span>List</span>
       <div class="logo-vol">VOL. I</div>
     </div>
 
-    <nav>
-      <a
-        v-for="link in navLinks"
-        :key="link.label"
-        href="#"
-        :class="{ active: link.label === activeNav }"
-        @click.prevent="activeNav = link.label"
-      >
-        {{ link.label }}
-      </a>
-    </nav>
-
     <div class="header-actions">
-      <button class="btn-ghost">Sign in</button>
+      <button class="btn-ghost">+ Add Tag</button>
+      <button class="btn-ghost">+ Add Category</button>
       <button class="btn-accent">+ Add Site</button>
     </div>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const navLinks = [
-  { label: 'Browse' },
-  { label: 'Collections' },
-  { label: 'Submit' },
-  { label: 'About' },
-]
-const activeNav = ref('Browse')
 </script>
 
 <style scoped>

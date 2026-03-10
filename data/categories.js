@@ -11,24 +11,20 @@ export const categories = [
   { icon: '🔒', label: 'Security',       count: 88 },
   { icon: '🌱', label: 'Productivity',   count: 264 },
   { icon: '📰', label: 'News & Media',   count: 201 },
+  { icon: '', label: 'Gaming', count: 10},
+  { icon: '', label: 'Money', count: 10},
+  { icon: '', label: 'Personal', count: 10},
+  { icon: '', label: 'Others', count: 10},
 ]
 
 export const tags = [
   'open-source', 'free', 'SaaS', 'API', 'no-code', 'CLI', 'browser ext.', 'mobile',
 ]
 
-export const collections = [
-  { icon: '🧰', label: 'Frontend Starter Kit' },
-  { icon: '🖌',  label: 'Design Inspiration' },
-  { icon: '📡', label: 'APIs & Data' },
-  { icon: '🚀', label: 'Indie Hacker Stack' },
-]
-
 export const filterTabs = [
   { label: 'All',          icon: null },
-  { label: 'Trending',     icon: '🔥' },
-  { label: 'Top Rated',    icon: '⭐' },
-  { label: 'New Arrivals', icon: '🆕' },
+  { label: 'Favorite',    icon: '⭐' },
+  { label: 'Newly Added', icon: '🆕' },
   { label: 'Design',       icon: '🎨' },
   { label: 'Dev Tools',    icon: '🛠' },
   { label: 'Learning',     icon: '📚' },

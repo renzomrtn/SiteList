@@ -4,7 +4,6 @@
       class="card-thumb"
       :style="{ background: `linear-gradient(135deg, ${site.gradient[0]}, ${site.gradient[1]})` }"
     >
-      <div class="favicon">{{ site.emoji }}</div>
       <div class="url-badge">{{ site.url }}</div>
       <div class="card-bookmark">🔖</div>
     </div>
@@ -16,14 +15,6 @@
       <div class="card-title">{{ site.name }}</div>
       <div class="card-desc">{{ site.description }}</div>
     </div>
-
-    <div class="card-footer">
-      <div class="card-meta">{{ site.metaIcon }} {{ site.meta }}</div>
-      <div class="rating">
-        {{ starString(site.rating) }}
-        <span class="rating-val">{{ site.rating.toFixed(1) }}</span>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -31,12 +22,6 @@
 defineProps({
   site: { type: Object, required: true },
 })
-
-function starString(rating) {
-  const full  = Math.round(rating)
-  const empty = 5 - full
-  return '★'.repeat(full) + '☆'.repeat(empty)
-}
 </script>
 
 <style scoped>

@@ -12,25 +12,12 @@
       <template v-if="tab.icon">{{ tab.icon }} </template>{{ tab.label }}
     </div>
 
-    <div class="sort-wrap">
-      <label>Sort:</label>
-      <select :value="sort" @change="$emit('update:sort', $event.target.value)">
-        <option v-for="opt in sortOptions" :key="opt" :value="opt">{{ opt }}</option>
-      </select>
-    </div>
   </div>
 </template>
 
 <script setup>
 import { filterTabs } from '~/data/categories.js'
 
-defineProps({
-  activeFilter: { type: String, default: 'All' },
-  sort: { type: String, default: 'Most Popular' },
-})
-defineEmits(['update:activeFilter', 'update:sort'])
-
-const sortOptions = ['Most Popular', 'Newest First', 'Top Rated', 'A–Z']
 </script>
 
 <style scoped>
