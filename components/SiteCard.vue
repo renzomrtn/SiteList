@@ -5,7 +5,6 @@
       :style="{ background: `linear-gradient(135deg, ${site.gradient[0]}, ${site.gradient[1]})` }"
     >
       <div class="url-badge">{{ site.url }}</div>
-      <div class="card-bookmark">🔖</div>
     </div>
 
     <div class="card-body">

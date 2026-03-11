@@ -16,7 +16,7 @@
         placeholder="Search by name, category, or keyword…"
         @input="$emit('update:modelValue', $event.target.value)"
       />
-      <span class="search-kbd">⌘K</span>
+      <span class="search-kbd">Search</span>
     </div>
 
     <div class="hero-stats">
